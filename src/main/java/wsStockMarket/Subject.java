@@ -1,6 +1,7 @@
 package wsStockMarket;
 
 public interface Subject {
-    void addSubscriber(Observer subscriber);
-    void removeSubscriber(Observer subscriber);
+    boolean registerObserver(Observer obs);
+    boolean removeObserver(Observer obs);
+    boolean notifyObservers();
 }
