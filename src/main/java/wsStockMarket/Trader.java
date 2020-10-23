@@ -11,7 +11,11 @@ public class Trader implements Observer {
     
     public void update(String t, String tipo_transaccion, String stock, double precio) {
         String str = nombre + ":The latest trade is Trader:" + t + 
-                            " " + tipo_transaccion + " $" + precio + " Stock:" + stock.toString();
+                            " " + tipo_transaccion + " $" + precio + " Stock: " + stock.toString();
         mercado_acciones.transaction_log += str + "\n";
+    }
+
+    public String toString() {
+        return nombre;
     }
 }
