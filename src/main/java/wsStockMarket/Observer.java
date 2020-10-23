@@ -1,5 +1,5 @@
 package wsStockMarket;
 
 public interface Observer {
-    boolean update(String t, String tipo_transaccion, double precio);
+    void update(String t, String tipo_transaccion, String stock, double precio);
 }
