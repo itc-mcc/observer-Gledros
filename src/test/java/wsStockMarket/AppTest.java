@@ -48,8 +48,8 @@ public class AppTest {
 
 // t1 compra la acción s1 en $1.00 y se les notifica a los interesados en esa acción ------------
     @Test public void testTrading1() {
-        String logTrade1 ="t1:The latest trade is Trader:t1 buy $1.00 Stock: MSFT\n";
-        String logTrade2 ="t2:The latest trade is Trader:t1 buy $1.00 Stock: MSFT";
+        String logTrade1 ="t1:The latest trade is Trader:t1 buy $1.0 Stock: MSFT\n";
+        String logTrade2 ="t2:The latest trade is Trader:t1 buy $1.0 Stock: MSFT\n";
 
         boolean condicion = (logTrade1+logTrade2).equals(sm.trade(t1,s1, "buy",1.00));
 
@@ -58,9 +58,9 @@ public class AppTest {
 
 // t2 vende la acción s2 en $3.00 y se les notifica a los interesados en esa acción ------------
     @Test public void testTrading2() {
-        String logTrade1 ="t1:The latest trade is Trader:t2 sell $3.00 Stock: GOOG\n";
-        String logTrade2 ="t2:The latest trade is Trader:t2 sell $3.00 Stock: GOOG\n";
-        String logTrade3 ="t3:The latest trade is Trader:t2 sell $3.00 Stock: GOOG";
+        String logTrade1 ="t1:The latest trade is Trader:t2 sell $3.0 Stock: GOOG\n";
+        String logTrade2 ="t2:The latest trade is Trader:t2 sell $3.0 Stock: GOOG\n";
+        String logTrade3 ="t3:The latest trade is Trader:t2 sell $3.0 Stock: GOOG\n";
 
         boolean condicion = (logTrade1+logTrade2+logTrade3).equals(sm.trade(t2,s2, "sell",3.00));
 
@@ -69,7 +69,7 @@ public class AppTest {
 
 // t3 vende la acción s3 en $2.50 y se les notifica a los interesados en esa acción ------------
     @Test public void testTrading3() {
-        String logTrade ="t3:The latest trade is Trader:t3 sell $2.50 Stock: AAPL";
+        String logTrade ="t3:The latest trade is Trader:t3 sell $2.5 Stock: AAPL\n";
 
         boolean condicion = logTrade.equals(sm.trade(t3,s3, "sell",2.50));
 
@@ -79,8 +79,8 @@ public class AppTest {
 // t3 compra la acción s4 en $5.00 y se les notifica a los interesados en esa acción ------------
 
     @Test public void testTrading4() {
-        String logTrade1 ="t3:The latest trade is Trader:t3 buy $5.00 Stock: GOOG\n";
-        String logTrade2 ="t2:The latest trade is Trader:t3 buy $5.00 Stock: GOOG";
+        String logTrade1 ="t3:The latest trade is Trader:t3 buy $5.0 Stock: GOOG\n";
+        String logTrade2 ="t2:The latest trade is Trader:t3 buy $5.0 Stock: GOOG";
 
         boolean condicion = (logTrade1+logTrade2).equals(sm.trade(t3,s4, "sell",5.00));
 
