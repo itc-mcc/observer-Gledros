@@ -34,14 +34,14 @@ public class App {
         sm.register(t3, s2);
         sm.register(t3, s3);
         sm.register(t3, s4);
-    
-        String logTrade1 ="t1:The latest trade is Trader:t1 buy $1.0 Stock: MSFT\n";
-        String logTrade2 ="t2:The latest trade is Trader:t1 buy $1.0 Stock: MSFT\n";
         
-        String logs = sm.trade(t1,s1, "buy",1.00);
-        
-        boolean condicion = (logTrade1+logTrade2).equals(logs);
+        String logTrade1 ="t2:The latest trade is Trader:t3 buy $5.0 Stock: GOOG\n";
+        String logTrade2 ="t3:The latest trade is Trader:t3 buy $5.0 Stock: GOOG\n";
 
+        String logs = sm.trade(t3,s4, "sell",5.00);
+
+        boolean condicion = (logTrade1+logTrade2).equals(logs);
+        
         System.out.println(logTrade1+logTrade2);
         System.out.println(logs);
 
