@@ -32,7 +32,7 @@ public class AppTest {
         t2 = new Trader("t2", sm);
         t3 = new Trader("t3", sm);
 
-// Vinculando al accionista con la acción que le interesa observar --------        
+// Vinculando al accionista con la accion que le interesa observar --------        
 
         sm.register(t1, s1);
         sm.register(t1, s2);
@@ -46,7 +46,7 @@ public class AppTest {
         sm.register(t3, s4);
     }
 
-// t1 compra la acción s1 en $1.00 y se les notifica a los interesados en esa acción ------------
+// t1 compra la accion s1 en $1.00 y se les notifica a los interesados en esa accion ------------
     @Test public void testTrading1() {
         String logTrade1 ="t1:The latest trade is Trader:t1 buy $1.0 Stock: MSFT\n";
         String logTrade2 ="t2:The latest trade is Trader:t1 buy $1.0 Stock: MSFT\n";
@@ -56,7 +56,7 @@ public class AppTest {
         assertTrue(condicion);
     }
 
-// t2 vende la acción s2 en $3.00 y se les notifica a los interesados en esa acción ------------
+// t2 vende la accion s2 en $3.00 y se les notifica a los interesados en esa accion ------------
     @Test public void testTrading2() {
         String logTrade1 ="t1:The latest trade is Trader:t2 sell $3.0 Stock: GOOG\n";
         String logTrade2 ="t2:The latest trade is Trader:t2 sell $3.0 Stock: GOOG\n";
@@ -67,7 +67,7 @@ public class AppTest {
         assertTrue(condicion);
     }
 
-// t3 vende la acción s3 en $2.50 y se les notifica a los interesados en esa acción ------------
+// t3 vende la accion s3 en $2.50 y se les notifica a los interesados en esa accion ------------
     @Test public void testTrading3() {
         String logTrade ="t3:The latest trade is Trader:t3 sell $2.5 Stock: AAPL\n";
 
@@ -76,7 +76,7 @@ public class AppTest {
         assertTrue(condicion);
     }
 
-// t3 compra la acción s4 en $5.00 y se les notifica a los interesados en esa acción ------------
+// t3 compra la accion s4 en $5.00 y se les notifica a los interesados en esa accion ------------
 
     @Test public void testTrading4() {
         String logTrade1 ="t2:The latest trade is Trader:t3 buy $5.0 Stock: GOOG\n";
